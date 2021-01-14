@@ -7,7 +7,6 @@ class NH3 {
     byte pin;
     
   public:
-    // Setup pin NH3 and call init()
     NH3(byte pin);
     void init();
     void sensorValue();
