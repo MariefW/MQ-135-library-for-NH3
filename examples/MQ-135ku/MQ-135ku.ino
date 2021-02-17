@@ -7,8 +7,11 @@ void setup() {
 }
 
 void loop() {
-  nh3.sensorValue();
+  Serial.println("Nilai Sensor : ");
+  nh3.nilai_sensor();
+  Serial.println("Nilai VRL : ");
   nh3.nilai_vrl();
+  Serial.println("Nilai ppm : ");
   nh3.nilai_ppm();
   delay(1000);
 

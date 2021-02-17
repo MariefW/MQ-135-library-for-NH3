@@ -7,10 +7,12 @@ class NH3 {
     byte pin;
     
   public:
+
     NH3(byte pin);
+
     void init();
-    void sensorValue();
-    void vrlValue();
-    void ppmValue();
+    void nilai_sensor();
+    void nilai_vrl();
+    void nilai_ppm();
 };
 #endif
