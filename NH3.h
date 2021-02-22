@@ -9,7 +9,7 @@ class NH3 {
   public:
 
     NH3(byte pin);
-
+    
     void init();
     void nilai_sensor();
     void nilai_vrl();

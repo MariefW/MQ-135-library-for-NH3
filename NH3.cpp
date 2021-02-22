@@ -19,6 +19,7 @@ void NH3::init() {
   pinMode(pin, INPUT);
 }
 void NH3::nilai_ppm() {
+  VRL = analogRead(pin) * (5.0 / 1023.0); //Measure the voltage drop and convert to 0-5V
   Rs = ((5.0 * RL) / VRL) - RL; //Formula to get Rs value
   Ro = Rs/3.6; //Formula to get Ro value
   if(Ro > MaxRo) MaxRo = Ro;
@@ -27,8 +28,7 @@ void NH3::nilai_ppm() {
   Serial.println(ppm);
 }
 void NH3::nilai_vrl() {
-VRL = analogRead(pin) * (5.0 / 1023.0); //Measure the voltage drop and convert to 0-5V
-Serial.println(VRL);
+	Serial.println(VRL);
 }
 void NH3::nilai_sensor() {
   Serial.println(analogRead(pin));
